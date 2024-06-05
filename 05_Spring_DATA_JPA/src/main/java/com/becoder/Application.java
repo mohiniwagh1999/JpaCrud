@@ -22,22 +22,22 @@ public class Application {
 		 ConfigurableApplicationContext context=SpringApplication.run(Application.class, args);
 		 StudentRepo stRepo =context.getBean(StudentRepo.class);
 		 
-//		 Student st=new Student();
-//		 st.setName("mohini");
-//		 st.setCity("mumbai");
-//		 st.setStatus("programmer");
-//		 //stRepo.save(st);
+		 Student st=new Student();
+		 st.setName("mohini");
+		 st.setCity("mumbai");
+	 st.setStatus("programmer");
+		 //stRepo.save(st);
 		 
 		 //List<Student> list=(List<Student>) stRepo.findAll();
 		 //list.forEach(student-> System.out.println(student));
-//		Student st=stRepo.findById(2).get();
-//		System.out.println(st);
-//		st.setName("anand");
-//		st.setCity("aurangabad");
-//		st.setStatus("lower");
-//		stRepo.save(st);
-//		System.out.println("data updated");
-//		
+	Student st=stRepo.findById(2).get();
+		System.out.println(st);
+	st.setName("anand");
+	st.setCity("aurangabad");	
+	st.setStatus("lower");
+	stRepo.save(st);
+		System.out.println("data updated");
+		
 		 Student st=stRepo.findById(1).get();
 		System.out.println(st);
 		stRepo.delete(st);
